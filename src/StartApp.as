@@ -28,14 +28,7 @@ public class StartApp extends Sprite {
         image.scaleY= image.scaleX;
         addChild(image);
 
-        /*bitmap = new Labrique();
-        textur = Texture.fromBitmap(bitmap);
-        image = new Image(textur);
-        image.width=Starling.current.nativeStage.stageWidth;
-        image.scaleY = image.scaleX;
-        addChild(image);
 
-        trace("go");*/
 
 
 
