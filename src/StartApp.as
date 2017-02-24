@@ -12,7 +12,7 @@ import starling.textures.Texture;
 
 public class StartApp extends Sprite {
 
-    [Embed(source="assets/flag.png")]
+    [Embed(source="assets/flag.png")]//in ax ro neshoun nemide
 
     public static const Labrique:Class;
     public var bitmap:Bitmap;
@@ -28,7 +28,7 @@ public class StartApp extends Sprite {
         image.scaleY= image.scaleX;
         addChild(image);
 
-
+//sLam agha. pub
 
 
 
