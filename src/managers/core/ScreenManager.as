@@ -38,7 +38,7 @@ package managers.core
 		private static var roots:Array; 
 		
 		public function ScreenManager()
-		{پای
+		{
 			super();
 		}
 
