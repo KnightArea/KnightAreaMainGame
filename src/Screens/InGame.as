@@ -4,6 +4,8 @@
 package Screens {
 import Objects.Hero;
 
+import managers.core.ScreenManager;
+
 import starling.display.Image;
 
 import starling.display.Sprite;
@@ -31,15 +33,15 @@ public class InGame extends Sprite{
 
 
         back = new Image(Assets.getTexture("back"));
-        back.width = stage.stageWidth;
-        back.height = stage.stageHeight;
+        back.width = ScreenManager.flashW;
+        back.height = ScreenManager.flashH;
         this.addChild(back);
 
         hero = new Hero();
         hero.scaleX = .2;
         hero.scaleY = .2;
-        hero.x = stage.stageWidth/2;
-        hero.y = stage.stageHeight/2;
+        hero.x = ScreenManager.flashW/2;
+        hero.y = ScreenManager.flashH/2;
         this.addChild(hero);
 
     }
