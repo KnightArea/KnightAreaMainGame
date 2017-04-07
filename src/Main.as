@@ -5,6 +5,7 @@ package {
 import flash.display.Sprite
 import flash.events.Event;
 import flash.events.MouseEvent;
+import flash.geom.Rectangle;
 
 import net.hires.debug.Stats;
 
@@ -66,7 +67,7 @@ public class Main extends Sprite {
             testView.graphics.drawRoundRect(0,0,ScreenManager.stageWidthOnScale(),ScreenManager.stageHeightOnScale(),100);
         }
 
-       // myStarling.viewPort = new Rectangle(0,0,ScreenManager.stageWidth,ScreenManager.stageHeight);
+        myStarling.viewPort = new Rectangle(0,0,ScreenManager.stageWidth,ScreenManager.stageHeight);
         myStarling.stage.stageWidth = ScreenManager.stageWidth ;
         myStarling.stage.stageHeight = ScreenManager.stageHeight ;
     }

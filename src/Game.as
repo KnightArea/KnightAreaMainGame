@@ -33,13 +33,14 @@ public class Game extends Sprite{
 
         this.addEventListener(starling.events.Event.ADDED_TO_STAGE,onAddedToStage);
         ScreenManager.eventDispatcher.addEventListener(Event.RESIZE,controllSize);
-        controllSize(null);
     }
 
     protected function controllSize(event:Event):void
     {
-        trace("Screen size changed for starling");
+        trace("Screen size changed for starling : "+ScreenManager.scaleFactor );
         this.scaleX = this.scaleY = ScreenManager.scaleFactor ;
+        trace("ScreenManager.deltaXOnScaleFactor() : "+ScreenManager.deltaXOnScaleFactor());
+        trace("ScreenManager.deltaYOnScaleFactor() : "+ScreenManager.deltaYOnScaleFactor());
         this.x = ScreenManager.deltaXOnScaleFactor() ;
         this.y = ScreenManager.deltaYOnScaleFactor() ;
     }
@@ -47,6 +48,9 @@ public class Game extends Sprite{
     private function onAddedToStage(event:Event):void {
 
         trace("Starling FramWork initialized! ");
+        controllSize(null);
+        //Debug return
+            //return;
 
         this.addEventListener(Events.navigationEvent.CHANCHE_SCREEN,onChangeScreen);
 
