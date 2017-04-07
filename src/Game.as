@@ -8,8 +8,11 @@ import Screens.InGame;
 
 import Screens.Welcome;
 
+import managers.core.ScreenManager;
+
 import starling.display.Sprite;
 import starling.events.Event;
+import starling.display.Quad;
 
 
 public class Game extends Sprite{
@@ -21,7 +24,24 @@ public class Game extends Sprite{
     public function Game() {
 
         super ();
-         this.addEventListener(starling.events.Event.ADDED_TO_STAGE,onAddedToStage);
+        trace("ScreenManager.flashW : "+ScreenManager.flashW);
+        trace("ScreenManager.flashH : "+ScreenManager.flashH);
+        var qu:Quad = new Quad(ScreenManager.flashW-10,ScreenManager.flashH-10,0x00ff00);
+        qu.x = 5;
+        qu.y = 5;
+        this.addChild(qu);
+
+        this.addEventListener(starling.events.Event.ADDED_TO_STAGE,onAddedToStage);
+        ScreenManager.eventDispatcher.addEventListener(Event.RESIZE,controllSize);
+        controllSize(null);
+    }
+
+    protected function controllSize(event:Event):void
+    {
+        trace("Screen size changed for starling");
+        this.scaleX = this.scaleY = ScreenManager.scaleFactor ;
+        this.x = ScreenManager.deltaXOnScaleFactor() ;
+        this.y = ScreenManager.deltaYOnScaleFactor() ;
     }
 
     private function onAddedToStage(event:Event):void {

@@ -27,10 +27,11 @@ public class Main extends Sprite {
 
     public function Main() {
 
+        trace("hi");
 
         testView = new Sprite();
         testView.graphics.beginFill(0xff0000,0.5);
-        testView.graphics.drawRoundRect(0,0,1024,768,100);
+        testView.graphics.drawRoundRect(0,0,2736,1824,100);
         this.addChild(testView);
 
       //  stats = new Stats();
@@ -51,6 +52,7 @@ public class Main extends Sprite {
 
     private function manageStageSize(e:Event):void
     {
+        trace("Manage stage size : "+ScreenManager.scaleFactor)
         if(true)
         {
             root.scaleX = testView.scaleY = ScreenManager.scaleFactor ;
@@ -59,9 +61,9 @@ public class Main extends Sprite {
         }
         else if(false)
         {
-           // testView.graphics.clear();
-          //  testView.graphics.beginFill(0xff0000,0.5);
-          //  testView.graphics.drawRoundRect(0,0,ScreenManager.stageWidthOnScale(),ScreenManager.stageHeightOnScale(),100);
+            testView.graphics.clear();
+            testView.graphics.beginFill(0xff0000,0.5);
+            testView.graphics.drawRoundRect(0,0,ScreenManager.stageWidthOnScale(),ScreenManager.stageHeightOnScale(),100);
         }
 
        // myStarling.viewPort = new Rectangle(0,0,ScreenManager.stageWidth,ScreenManager.stageHeight);
