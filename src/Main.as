@@ -33,7 +33,7 @@ public class Main extends Sprite {
         testView = new Sprite();
         testView.graphics.beginFill(0xff0000,0.5);
         testView.graphics.drawRoundRect(0,0,2736,1824,100);
-        this.addChild(testView);
+        //this.addChild(testView);
 
       //  stats = new Stats();
      //   this.addChild(stats);

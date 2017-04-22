@@ -29,7 +29,7 @@ public class Game extends Sprite{
         var qu:Quad = new Quad(ScreenManager.flashW-10,ScreenManager.flashH-10,0x00ff00);
         qu.x = 5;
         qu.y = 5;
-        this.addChild(qu);
+        //this.addChild(qu);
 
         this.addEventListener(starling.events.Event.ADDED_TO_STAGE,onAddedToStage);
         ScreenManager.eventDispatcher.addEventListener(Event.RESIZE,controllSize);
